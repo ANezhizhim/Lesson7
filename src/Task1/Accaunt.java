@@ -4,12 +4,36 @@ public class Accaunt {
     private int id;
     private String holder;
     private double amount;
-    public Accaunt (int id, String holder, double amount){
-        this.id=id;
-        this.holder=holder;
-        this.amount=amount;
+
+    public Accaunt(int id, String holder, double amount) {
+        this.id = id;
+        this.holder = holder;
+        this.amount = amount;
+    }
+
+    public int getId() {
+        return this.id;
+    }
+
+    public String getHolder() {
+        return this.holder;
+    }
+
+    public double getAmount() {
+        return this.amount;
+    }
+
+    public void setId(int accountId) {
+        this.id = accountId;
+    }
+    public void setHolder(String accountHolder) {
+        this.holder = accountHolder;
+    }
+    public void setAmount(double accountAmount) {
+        this.amount = accountAmount;
     }
 }
+
 
 /*
 ∎Реализовать класс Account c полями: id –уникальный идентификатор счета, holder –владелец счета, amount –сумма на счете
