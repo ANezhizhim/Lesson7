@@ -11,9 +11,8 @@ import java.util.Scanner;
 public class AccauntManagerApp {
     public static void main(String[] args) throws IOException {
 
-        // Path pathFile = "Clients.txt";
         Path pathFile = Paths.get("Clients.txt");
-        System.out.println("Путь" + pathFile.toString());
+        System.out.println("Путь: " + pathFile.toString());
 
         AccauntManager clientService = new AccauntManager();
         clientService.setPathFile(pathFile);
@@ -34,7 +33,6 @@ public class AccauntManagerApp {
 
             switch (commandLine.substring(0, 9)) {
                 case "balance [":
-                    // System.out.println("idClient = " + idClient);
                     try {
                         clientService.balance(idClient);
                     } catch (UnknownAccountException ex) {

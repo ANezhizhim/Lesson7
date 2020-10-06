@@ -40,7 +40,6 @@ public class AccauntManager implements AccauntService {
     public void openFile() throws IOException {
         try (BufferedReader reader = new BufferedReader(new FileReader(this.pathFile.toString()))) {
             this.strFlow = reader.readLine();
-            System.out.println("strFlow = " + this.strFlow);
         } catch (FileNotFoundException ex) {
 
             fillClientDataBase();
